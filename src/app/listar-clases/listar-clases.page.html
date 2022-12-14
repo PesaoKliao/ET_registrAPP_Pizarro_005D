@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="mostrarMenu()">
+        <ion-icon slot="start" name="menu-outline"></ion-icon></ion-button>
+      </ion-buttons>
+    <ion-title>listar-clases</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-list>
+    <ion-item *ngFor="let a of clases">
+      <h6><ion-label>{{a.codigo}} </ion-label></h6>
+      </ion-item>
+  </ion-list>
+
+</ion-content>

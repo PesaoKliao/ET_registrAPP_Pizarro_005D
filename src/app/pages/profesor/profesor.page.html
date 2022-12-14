@@ -1,0 +1,63 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="mostrarMenu()">
+        <ion-icon slot="start" name="menu-outline"></ion-icon></ion-button>
+    </ion-buttons>
+    <ion-title>Sesion de Profesor</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content >
+
+  <div class="main-header">
+    <h4 class="titulo">Bienvenid@ {{getName()}} </h4>
+    <h2 class="temper">Temperatura: {{temperatura}}</h2>
+  </div>
+
+  <div class="container">
+    <ion-grid class="margindiv">
+      <ion-row>
+        <ion-col size="12">
+
+          <ion-card mode="md">
+            <ion-card-header>
+              <ion-card-title style="text-align: center;"><b>Generar QR de la clase.</b></ion-card-title>
+            </ion-card-header>
+            <ion-card-content>
+              <form #formulario="ngForm" (ngSubmit)="onSubmit()">
+                <ion-card >
+                  <ion-item>
+                    <ion-label>Codigo Asignatura:</ion-label>
+                    <ion-input type="text" placeholder="AAA123" name="codigo" [(ngModel)]="clase.codigo" required> </ion-input>
+                  </ion-item>
+
+                  <ion-item>
+                    <ion-label>Seccion:</ion-label>
+                    <ion-input type="text" placeholder="001D" name="Seccion" [(ngModel)]="clase.seccion" required></ion-input>
+                  </ion-item>
+            
+                  <ion-item>
+                    <ion-label>Clase N°:</ion-label>
+                    <ion-input type="text" pattern="[0-9]+" placeholder="1" name="numeroClase" [(ngModel)]="clase.numeroClase" required>
+                    </ion-input>
+                  </ion-item>
+
+                  <ion-item>
+                    <ion-label>fecha:</ion-label>
+                    <ion-input type="date" placeholder="dd/mm/aa" name="fecha" [(ngModel)]="clase.fecha" required></ion-input>
+                  </ion-item>
+            
+                </ion-card>
+                <ion-button [disabled]="formulario.invalid" type="submit" expand="full" color="tertiary" shape="round"
+                routerLink="/qr-generado">Abrir clase</ion-button>
+              </form>
+            </ion-card-content>
+          </ion-card>
+
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+
+</ion-content>
