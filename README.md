@@ -12,7 +12,7 @@ Se te abrira un menu en el que deberas seleccionar la opcion de 'Angular', Y lue
 
 Luego debes entrar a la carpeta que se haya generado con el nombre que pusiste para despues clonar este repositorio con: con:
 
-git clone https://github.com/PesaoKliao/ex3RegistrAPP_Pizarro_005D
+git clone https://github.com/PesaoKliao/ET_registrAPP_Pizarro_005D.git
 
 Una vez hecho esto, deberas eliminar la carpeta llamada 'src' y reemplazar el nombre de la carpeta 'ex3RegistrAPP_Pizarro_005D' por 'src'.
 
